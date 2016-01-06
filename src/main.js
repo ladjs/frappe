@@ -20,7 +20,7 @@ import util from 'util';
 crashReporter.start({
   productName: 'Frappe',
   companyName: 'Niftylettuce LLC',
-  submitURL: 'https://frap.pe/api/crash-reporter',
+  submitURL: 'https://getfrappe.com/api/crash-reporter',
   autoSubmit: true
 });
 
@@ -35,7 +35,7 @@ const iconPathPressedShaken = path.join(
 const client = adb.createClient();
 const shortcut = 'cmd+shift+r';
 const version = require('../package.json').version;
-const feedURL = 'https://frap.pe/api/updates?version=' + version;
+const feedURL = 'https://getfrappe.com/api/updates?version=' + version;
 const versionStr = `Frappe v${version} by @niftylettuce`;
 
 // https://donorbox.org/frappe
