@@ -3,8 +3,6 @@
 
 # Frappé
 
-[![NPM version][npm-image]][npm-url]
-[![NPM downloads][npm-downloads]][npm-url]
 [![MIT License][license-image]][license-url]
 
 > Remotely shake your Android devices (including emulators) using a menubar applet and the hotkey `cmd+shift+r`.
@@ -16,8 +14,6 @@
 
 The latest release can be found on the [release page][release-page].
 
-You can also install using [Node][node]/[NPM][npm] with `npm install -g frappe` and then run `frappe` command.
-
 
 ## Support
 
@@ -25,20 +21,20 @@ If you have questions or find a bug, please report it under [Issues][issues].
 
 Donations are appreciated and will support free and open source projects.
 
-Instead of requiring you to pay to unlock some annoying "license" jargon pop-ups, or making this only available through the Mac App Store, I made it free; so please donate!
+Instead of requiring you to pay to unlock typical (and annoying) "license expired" pop-ups and making this only available through the Mac App Store -- I made it free; so please donate!
 
 **[Donate Now][donate-now]**
 
 
 ## Background
 
-`frappe` binds the OS X shortcut `cmd+shift+r` to shake all of your connected Android devices over `adb`.
+Frappé binds the OS X shortcut `cmd+shift+r` to shake all of your connected Android devices over `adb`.
 
 It's a replacement for something like `adb shell input keyevent 82`.
 
 Due bugs in OS X, you cannot create a custom AppleScript command to do this and bind it with Keyboard Shortcuts.
 
-More importantly, `frappe` will shake all your devices for you accurately using `adb` directly (e.g. no more typing `-s device-id`)!
+More importantly, Frappé will shake all your devices for you accurately using `adb` directly (e.g. no more typing `-s device-id`)!
 
 
 ## Endpoints
@@ -67,8 +63,6 @@ More importantly, `frappe` will shake all your devices for you accurately using 
 [donate-now]: https://goo.gl/I1JFTX
 [issues]: https://github.com/niftylettuce/issues
 [release-page]: https://github.com/niftylettuce/frappe/releases
-[node]: https://nodejs.org
-[npm]: https://www.npmjs.com
 [cafe-frappe]: http://www.colourlovers.com/palette/157431/Caf%C3%A9_Frapp%C3%A9
 [coffee-drink]: https://thenounproject.com/term/coffee-drink/291679
 [earthquake]: https://thenounproject.com/term/earthquake/21862
@@ -76,6 +70,3 @@ More importantly, `frappe` will shake all your devices for you accurately using 
 [license-url]: LICENSE
 [frappe-logo]: https://cdn.rawgit.com/niftylettuce/frappe/master/media/logo.svg
 [demo]: https://cdn.rawgit.com/niftylettuce/frappe/master/media/demo.gif
-[npm-image]: http://img.shields.io/npm/v/frappe.svg?style=flat
-[npm-url]: https://npmjs.org/package/frappe
-[npm-downloads]: http://img.shields.io/npm/dm/frappe.svg?style=flat
