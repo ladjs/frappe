@@ -1,0 +1,29 @@
+{
+  "name": "frappe",
+  "version": "0.0.1",
+  "main": "dist/main.js",
+  "author": "Nick Baugh <niftylettuce@gmail.com>",
+  "description": "Remotely shake your Android devices (including emulators) using a menubar applet and the hotkey `cmd+shift+r`.",
+  "scripts": {
+    "start": "NODE_ENV=development electron-compile ./src/ ./media/ && NODE_ENV=development electron src/main.js",
+    "dist": "rm -rf .cache && rm -rf dist && rm -rf build && babel src -d dist/ && electron-compile ./dist",
+    "build": "npm run dist && electron-packager . Frappe --platform=darwin --arch=x64 --version=0.36.2 --icon=media/Icon.icns --app-version=0.0.1 --app-category-type=public.app-category.developer-tools --build-version=1 --app-bundle-id=com.niftylettuce.frappe --out=build --sign=5707CED72ABE1520C144B2E20F8CB794B20929AD --ignore=/*.sketch/ --ignore=/*.gif/ --ignore=/*.DS_Store/ --ignore=/*.cache/",
+    "package": "NODE_ENV=production npm run build && electron-builder \"build/Frappe-darwin-x64/Frappe.app\" --platform=osx --out=\"dist/osx\" --config=builder.json"
+  },
+  "bin": {
+    "frappe": ""
+  },
+  "dependencies": {
+    "adbkit": "^2.3.1",
+    "prfun": "^2.1.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.3.17",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-stage-0": "^6.3.13",
+    "electron-builder": "^2.5.0",
+    "electron-packager": "^5.2.0",
+    "electron-prebuilt-compile": "^0.36.1",
+    "nodemon": "^1.8.1"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "osx" : {
+    "title": "Frappé",
+    "background": "media/install.png",
+    "icon": "media/Icon.icns",
+    "icon-size": 80,
+    "contents": [
+      { "x": 420, "y": 193, "type": "link", "path": "/Applications" },
+      { "x": 182, "y": 193, "type": "file" }
+    ]
+  }
+}
