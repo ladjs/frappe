@@ -90,9 +90,6 @@ if (process.env.NODE_ENV !== 'development') {
     }
   );
 
-  // check for an update right now
-  autoUpdater.checkForUpdates();
-
   // check every four hours
   setInterval(() => {
     autoUpdater.checkForUpdates();
@@ -278,21 +275,20 @@ function shake(deviceId) {
   if (typeof deviceId === 'string')
     selectedDeviceIds = [ deviceId ];
 
+  tray.setImage(iconPathPressedShaken);
+  setTimeout(() => {
+    tray.setImage(iconPathPressed);
+  }, 150);
+  setTimeout(() => {
+    tray.setImage(iconPathPressedShaken);
+  }, 300);
+  setTimeout(() => {
+    tray.setImage(iconPathPressed);
+  }, 450);
+
   Promise.map(selectedDeviceIds, id => {
     return client.shell(id, 'input keyevent 82')
       .then(adb.util.readAll)
-      .then((output) => {
-        tray.setImage(iconPathPressedShaken);
-        setTimeout(() => {
-          tray.setImage(iconPathPressed);
-        }, 150);
-        setTimeout(() => {
-          tray.setImage(iconPathPressedShaken);
-        }, 300);
-        setTimeout(() => {
-          tray.setImage(iconPathPressed);
-        }, 450);
-      });
   }).catch(err => {
     dialog.showMessageBox({
       type: 'warning',
