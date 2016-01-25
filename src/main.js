@@ -27,9 +27,9 @@ crashReporter.start({
 const fourHours = 1000 * 60 * 60 * 4
 const mediaPath = path.join(__dirname, '..', 'media');
 const iconPath = path.join(mediaPath, 'IconTemplate.png');
-const iconPathPressed = path.join(mediaPath, 'IconTemplatePressed.png');
+const iconPathPressed = path.join(mediaPath, 'IconPressedTemplate.png');
 const iconPathPressedShaken = path.join(
-  mediaPath, 'IconTemplatePressedShaken.png'
+  mediaPath, 'IconPressedShakenTemplate.png'
 );
 
 const client = adb.createClient();
