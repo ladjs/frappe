@@ -1,9 +1,9 @@
 {
-  "name": "frappe",
-  "version": "0.0.1",
+  "name": "milkshake",
+  "version": "0.9.1",
   "main": "dist/main.js",
-  "author": "Nick Baugh <niftylettuce@gmail.com>",
-  "description": "Remotely shake your Android devices (including emulators) using a menubar applet and the hotkey `cmd+shift+r`.",
+  "author": "Nick Baugh <niftylettuce@gmail.com>, Alexander Pantyukhov <alwxndr@gmail.com>",
+  "description": "Remotely shake your Android devices (including emulators)",
   "scripts": {
     "start": "NODE_ENV=development electron-compile ./src/ ./media/ && NODE_ENV=development electron src/main.js",
     "dist": "rm -rf .cache && rm -rf dist && rm -rf build && babel src -d dist/ && electron-compile ./dist",
