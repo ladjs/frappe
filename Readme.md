@@ -1,50 +1,27 @@
+# Milkshake
 
-![Frappe][frappe-logo]
-
-# Frappé
+Based on Frappé by [@niftylettuce](https://github.com/niftylettuce)
 
 [![MIT License][license-image]][license-url]
 
-> Remotely shake your Android devices (including emulators) using a menubar applet and the hotkey `cmd+shift+r`.
-
-![Demo][demo]
-
+The reason why I decided to fork [Frappé](https://github.com/niftylettuce/frappe) is simple — I'm a React Native developer, and I'm tired of clicking "Reload JS" or "Debug JS" in React Native context menu manually. 
+**Milkshake** allows you to shake Android devices (including emulators), and perform some additional actions automatically, for example, start JS debugging and reload JS.
 
 ## Download
 
 The latest release can be found on the [release page][release-page].
 
-
 ## Support
 
 If you have questions or find a bug, please report it under [Issues][issues].
 
-Donations are appreciated and will support free and open source projects.
-
-Instead of requiring you to pay to unlock typical (and annoying) "license expired" pop-ups and making this only available through the Mac App Store -- I made it free; so please donate!
+If you want to send a donation, please send it to [@niftylettuce](https://github.com/niftylettuce) — he is the developer of original Frappé, and he deserves your money :)
 
 **[Donate Now][donate-now]**
 
-
-## Background
-
-Frappé binds the OS X shortcut `cmd+shift+r` to shake all of your connected Android devices over `adb`.
-
-It's a replacement for something like `adb shell input keyevent 82`.
-
-Due bugs in OS X, you cannot create a custom AppleScript command to do this and bind it with Keyboard Shortcuts.
-
-More importantly, Frappé will shake all your devices for you accurately using `adb` directly (e.g. no more typing `-s device-id`)!
-
-
-## Endpoints
-
-* `/api/crash-reporter` - sends me a crash report in case you run into issues (uses Electron's crashReporter)
-* `/api/updates?version=x.x.x` - checks for updates released here on GitHub (uses Electron's Squirrel implementation)
-
-
 ## Contributors
 
+* Alexander Pantyukhov <alwxndr@gmail.com>
 * Nick Baugh <niftylettuce@gmail.com>
 
 
@@ -53,7 +30,6 @@ More importantly, Frappé will shake all your devices for you accurately using `
 * [Coffee drink][coffee-drink] by eivven from the Noun Project
 * [Earthquake][earthquake] by Mauro Lucchesi from the Noun Project
 * [Café Frappé][cafe-frappe] colour palette from Colour Lovers
-
 
 ## License
 
