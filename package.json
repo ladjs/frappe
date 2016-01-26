@@ -7,8 +7,8 @@
   "scripts": {
     "start": "NODE_ENV=development electron-compile ./src/ ./media/ && NODE_ENV=development electron src/main.js",
     "dist": "rm -rf .cache && rm -rf dist && rm -rf build && babel src -d dist/ && electron-compile ./dist",
-    "build": "npm run dist && electron-packager . Frappe --platform=darwin --arch=x64 --version=0.36.2 --icon=media/Icon.icns --app-version=0.0.1 --app-category-type=public.app-category.developer-tools --build-version=1 --app-bundle-id=com.niftylettuce.frappe --out=build --sign=5707CED72ABE1520C144B2E20F8CB794B20929AD --ignore=/*.sketch/ --ignore=/*.gif/ --ignore=/*.DS_Store/ --ignore=/*.cache/",
-    "package": "NODE_ENV=production npm run build && electron-builder \"build/Frappe-darwin-x64/Frappe.app\" --platform=osx --out=\"dist/osx\" --config=builder.json"
+    "build": "npm run dist && electron-packager . Milkshake --platform=darwin --arch=x64 --version=0.36.2 --icon=media/Icon.icns --app-version=0.0.1 --app-category-type=public.app-category.developer-tools --build-version=1 --app-bundle-id=com.alwxdev.milkshake --out=build --ignore=/*.sketch/ --ignore=/*.gif/ --ignore=/*.DS_Store/ --ignore=/*.cache/",
+    "package": "NODE_ENV=production npm run build && electron-builder \"build/Milkshake-darwin-x64/Milkshake.app\" --platform=osx --out=\"dist/osx\" --config=builder.json"
   },
   "dependencies": {
     "adbkit": "^2.3.1",
