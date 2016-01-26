@@ -40,7 +40,7 @@ If you want to send a donation, please send it to [@niftylettuce](https://github
 [MIT][license-url]
 
 
-[demo]: https://cdn.rawgit.com/alwx/frappe/master/media/milkshake.png
+[demo]: https://cdn.rawgit.com/alwx/milkshake/master/media/milkshake.png
 [donate-now]: https://goo.gl/I1JFTX
 [issues]: https://github.com/alwx/milkshake/issues
 [release-page]: https://github.com/alwx/milkshake/releases
