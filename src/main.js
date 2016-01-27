@@ -19,8 +19,7 @@ const iconPathPressed = path.join(mediaPath, 'IconPressedTemplate.png');
 
 const client = adb.createClient();
 const version = require('../package.json').version;
-const versionStr = `Milkshake v${version} by @alwx`;
-const versionAdditionalStr = `Based on Frappé by @niftylettuce`
+const versionStr = `Frappé v${version} by @niftylettuce & @alwx`;
 const gitHubURL = 'https://github.com/alwx/milkshake';
 
 const commands = {
@@ -145,11 +144,6 @@ function menuTemplate() {
     let menu = [
         {
             label: versionStr,
-            role: 'help',
-            enabled: false
-        },
-        {
-            label: versionAdditionalStr,
             role: 'help',
             enabled: false
         },
