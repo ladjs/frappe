@@ -250,7 +250,7 @@ function deviceCallChain(id, commands, finally_fn) {
     }
 }
 
-function deviceCall(deviceId, commands) {
+const deviceCall = (deviceId, commands) => setImmediate(() => {
     let selectedDeviceIds = deviceIds;
 
     if (typeof deviceId === 'string') {
@@ -272,4 +272,4 @@ function deviceCall(deviceId, commands) {
             detail: err.message || err
         });
     });
-}
+});
