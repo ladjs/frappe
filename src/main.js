@@ -237,7 +237,7 @@ function deviceCallChain(id, commands, finally_fn) {
         return shellCommand.then(() => {
             setTimeout(() => {
                 deviceCallChain(id, commands.slice(1), finally_fn);
-            }, 200)
+            }, 500)
         });
     } else {
         return shellCommand.then(finally_fn);
