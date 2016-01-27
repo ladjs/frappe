@@ -19,17 +19,17 @@ const iconPathPressed = path.join(mediaPath, 'IconPressedTemplate.png');
 
 const client = adb.createClient();
 const version = require('../package.json').version;
-const versionStr = `Frappé v${version} by @niftylettuce & @alwx`;
-const gitHubURL = 'https://github.com/alwx/milkshake';
+const versionStr = `Frappé v${version} by @niftylettuce && @alwx`;
+const gitHubURL = 'https://github.com/niftylettuce/frappe';
 
 const commands = {
     shake:      {shortcut: 'cmd+shift+s',
                  operations: ['input keyevent 82']},
-    reloadJs:   {shortcut: 'cmd+ctrl+shift+r',
+    reloadJs:   {shortcut: 'cmd+shift+r',
                  operations: ['input keyevent 82',
                               'input keyevent 19',
                               'input keyevent 23']},
-    debugJs:    {shortcut: 'cmd+ctrl+shift+d',
+    debugJs:    {shortcut: 'cmd+shift+d',
                  operations: ['input keyevent 82',
                               'input keyevent 19',
                               'input keyevent 20',

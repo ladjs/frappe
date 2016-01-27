@@ -1,6 +1,6 @@
 {
   "name": "frappe",
-  "version": "0.1",
+  "version": "0.1.0",
   "main": "dist/main.js",
   "author": "Nick Baugh <niftylettuce@gmail.com>, Alexander Pantyukhov <alwxndr@gmail.com>",
   "description": "Remotely shake your Android devices (including emulators)",

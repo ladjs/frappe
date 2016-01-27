@@ -33,7 +33,7 @@ If you have questions or find a bug, please report it under [Issues][issues].
 
 
 [frappe]: https://github.com/niftylettuce/frappe
-[demo]: https://cdn.rawgit.com/niftylettuce/frappe/master/media/milkshake.png
+[demo]: https://raw.githubusercontent.com/niftylettuce/frappe/master/media/demo.png
 [donate-now]: https://goo.gl/I1JFTX
 [issues]: https://github.com/niftylettuce/frappe/issues
 [release-page]: https://github.com/niftylettuce/frappe/releases
