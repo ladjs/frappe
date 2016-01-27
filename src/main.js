@@ -19,18 +19,17 @@ const iconPathPressed = path.join(mediaPath, 'IconPressedTemplate.png');
 
 const client = adb.createClient();
 const version = require('../package.json').version;
-const versionStr = `Milkshake v${version} by @alwx`;
-const versionAdditionalStr = `Based on Frappé by @niftylettuce`
-const gitHubURL = 'https://github.com/alwx/milkshake';
+const versionStr = `Frappé v${version} by @niftylettuce && @alwx`;
+const gitHubURL = 'https://github.com/niftylettuce/frappe';
 
 const commands = {
     shake:      {shortcut: 'cmd+shift+s',
                  operations: ['input keyevent 82']},
-    reloadJs:   {shortcut: 'cmd+ctrl+shift+r',
+    reloadJs:   {shortcut: 'cmd+shift+r',
                  operations: ['input keyevent 82',
                               'input keyevent 19',
                               'input keyevent 23']},
-    debugJs:    {shortcut: 'cmd+ctrl+shift+d',
+    debugJs:    {shortcut: 'cmd+shift+d',
                  operations: ['input keyevent 82',
                               'input keyevent 19',
                               'input keyevent 20',
@@ -149,11 +148,6 @@ function menuTemplate() {
             enabled: false
         },
         {
-            label: versionAdditionalStr,
-            role: 'help',
-            enabled: false
-        },
-        {
             type: 'separator'
         }
     ];
@@ -228,11 +222,11 @@ function listDevices() {
 
 function refreshDevices() {
     let contextMenu = Menu.buildFromTemplate(menuTemplate());
+    tray.setContextMenu(contextMenu);
     if (deviceIds.length === 0) {
         tray.setImage(iconPath);
     } else {
         tray.setImage(iconPathPressed);
-        tray.setContextMenu(contextMenu);
     }
 }
 
@@ -243,7 +237,7 @@ function deviceCallChain(id, commands, finally_fn) {
         return shellCommand.then(() => {
             setTimeout(() => {
                 deviceCallChain(id, commands.slice(1), finally_fn);
-            }, 200)
+            }, 500)
         });
     } else {
         return shellCommand.then(finally_fn);

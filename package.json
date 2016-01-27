@@ -1,17 +1,18 @@
 {
-  "name": "milkshake",
-  "version": "0.9.1",
+  "name": "frappe",
+  "version": "0.1.1",
   "main": "dist/main.js",
   "author": "Nick Baugh <niftylettuce@gmail.com>, Alexander Pantyukhov <alwxndr@gmail.com>",
   "description": "Remotely shake your Android devices (including emulators)",
   "scripts": {
     "start": "NODE_ENV=development electron-compile ./src/ ./media/ && NODE_ENV=development electron src/main.js",
     "dist": "rm -rf .cache && rm -rf dist && rm -rf build && babel src -d dist/ && electron-compile ./dist",
-    "build": "npm run dist && electron-packager . Milkshake --platform=darwin --arch=x64 --version=0.36.2 --icon=media/Icon.icns --app-version=0.0.1 --app-category-type=public.app-category.developer-tools --build-version=1 --app-bundle-id=com.alwxdev.milkshake --out=build --ignore=/*.sketch/ --ignore=/*.gif/ --ignore=/*.DS_Store/ --ignore=/*.cache/",
-    "package": "NODE_ENV=production npm run build && electron-builder \"build/Milkshake-darwin-x64/Milkshake.app\" --platform=osx --out=\"dist/osx\" --config=builder.json"
+    "build": "npm run dist && electron-packager . Frappe --platform=darwin --arch=x64 --version=0.36.2 --icon=media/Icon.icns --app-version=0.0.1 --app-category-type=public.app-category.developer-tools --build-version=1 --app-bundle-id=com.niftylettuce.frappe --out=build --ignore=/*.sketch/ --ignore=/*.gif/ --ignore=/*.DS_Store/ --ignore=/*.cache/",
+    "package": "NODE_ENV=production npm run build && electron-builder \"build/Frappe-darwin-x64/Frappe.app\" --platform=osx --out=\"dist/osx\" --config=builder.json"
   },
   "dependencies": {
     "adbkit": "^2.3.1",
+    "electron-gh-releases": "^2.0.2",
     "prfun": "^2.1.3"
   },
   "devDependencies": {
