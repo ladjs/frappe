@@ -222,11 +222,11 @@ function listDevices() {
 
 function refreshDevices() {
     let contextMenu = Menu.buildFromTemplate(menuTemplate());
+    tray.setContextMenu(contextMenu);
     if (deviceIds.length === 0) {
         tray.setImage(iconPath);
     } else {
         tray.setImage(iconPathPressed);
-        tray.setContextMenu(contextMenu);
     }
 }
 
