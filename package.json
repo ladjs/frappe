@@ -19,9 +19,12 @@
     "babel-cli": "^6.3.17",
     "babel-preset-es2015": "^6.3.13",
     "babel-preset-stage-0": "^6.3.13",
-    "electron-builder": "^2.5.0",
-    "electron-packager": "^5.2.0",
-    "electron-prebuilt-compile": "^0.36.1",
+    "electron": "^1.6.10",
+    "electron-builder": "^18.6.2",
+    "electron-compile": "^6.4.1",
+    "electron-compilers": "^5.9.0",
+    "electron-packager": "^8.7.1",
+    "electron-prebuilt-compile": "^1.6.11",
     "nodemon": "^1.8.1"
   }
 }
