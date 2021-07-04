@@ -23,13 +23,13 @@ const versionStr = `Frappé v${version} by @niftylettuce && @alwx`;
 const gitHubURL = 'https://github.com/niftylettuce/frappe';
 
 const commands = {
-    shake:      {shortcut: 'cmd+shift+s',
+    shake:      {shortcut: 'cmd+ctrl+s',
                  operations: ['input keyevent 82']},
-    reloadJs:   {shortcut: 'cmd+shift+r',
+    reloadJs:   {shortcut: 'cmd+ctrl+r',
                  operations: ['input keyevent 82',
                               'input keyevent 19',
                               'input keyevent 23']},
-    debugJs:    {shortcut: 'cmd+shift+d',
+    debugJs:    {shortcut: 'cmd+ctrl+d',
                  operations: ['input keyevent 82',
                               'input keyevent 19',
                               'input keyevent 20',
