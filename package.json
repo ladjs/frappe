@@ -7,7 +7,8 @@
   "scripts": {
     "start": "NODE_ENV=development electron-compile ./src/ ./media/ && NODE_ENV=development electron src/main.js",
     "dist": "rm -rf .cache && rm -rf dist && rm -rf build && babel src -d dist/ && electron-compile ./dist",
-    "build": "npm run dist && electron-packager . Frappe --platform=darwin --arch=x64 --version=0.36.2 --icon=media/Icon.icns --app-version=0.0.1 --app-category-type=public.app-category.developer-tools --build-version=1 --app-bundle-id=com.niftylettuce.frappe --out=build --ignore=/*.sketch/ --ignore=/*.gif/ --ignore=/*.DS_Store/ --ignore=/*.cache/",
+    "build": "npm run dist && electron-packager . Frappe --platform=darwin --arch=x64 --electron-version=1.6.10 --icon=media/Icon.icns --app-version=0.0.1 --app-category-type=public.app-category.developer-tools --build-version=1 --app-bundle-id=com.niftylettuce.frappe --out=build --ignore=/*.sketch/ --ignore=/*.gif/ --ignore=/*.DS_Store/ --ignore=/*.cache/",
+    "build:linux": "npm run dist && electron-packager . Frappe --platform=linux --arch=x64 --electron-version=1.6.10 --icon=media/Icon.icns --app-version=0.0.1 --app-category-type=public.app-category.developer-tools --build-version=1 --app-bundle-id=com.niftylettuce.frappe --out=build --ignore=/*.sketch/ --ignore=/*.gif/ --ignore=/*.DS_Store/ --ignore=/*.cache/",
     "package": "NODE_ENV=production npm run build && electron-builder \"build/Frappe-darwin-x64/Frappe.app\" --platform=osx --out=\"dist/osx\" --config=builder.json"
   },
   "dependencies": {
@@ -19,9 +20,12 @@
     "babel-cli": "^6.3.17",
     "babel-preset-es2015": "^6.3.13",
     "babel-preset-stage-0": "^6.3.13",
-    "electron-builder": "^2.5.0",
-    "electron-packager": "^5.2.0",
-    "electron-prebuilt-compile": "^0.36.1",
+    "electron": "^1.6.10",
+    "electron-builder": "^18.6.2",
+    "electron-compile": "^6.4.1",
+    "electron-compilers": "^5.9.0",
+    "electron-packager": "^8.7.1",
+    "electron-prebuilt-compile": "^1.6.11",
     "nodemon": "^1.8.1"
   }
 }

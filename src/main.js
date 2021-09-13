@@ -23,31 +23,39 @@ const versionStr = `Frappé v${version} by @niftylettuce && @alwx`;
 const gitHubURL = 'https://github.com/niftylettuce/frappe';
 
 const commands = {
-    shake:      {shortcut: 'cmd+shift+s',
+    shake:      {shortcut: 'ctrl+shift+s',
                  operations: ['input keyevent 82']},
-    reloadJs:   {shortcut: 'cmd+shift+r',
+    reloadJs:   {shortcut: 'ctrl+shift+r',
                  operations: ['input keyevent 82',
                               'input keyevent 19',
                               'input keyevent 23']},
-    debugJs:    {shortcut: 'cmd+shift+d',
+    debugJs:    {shortcut: 'ctrl+shift+d',
                  operations: ['input keyevent 82',
                               'input keyevent 19',
                               'input keyevent 20',
                               'input keyevent 23']},
-    liveReload: {shortcut: 'cmd+ctrl+shift+e',
+    liveReload: {shortcut: 'ctrl+shift+e',
                  operations: ['input keyevent 82',
                               'input keyevent 19',
                               'input keyevent 20',
                               'input keyevent 20',
                               'input keyevent 23']}
+};
+
+// OSX specific initialization
+if (process.platform === 'darwin') {
+    // dock api only on osx
+    app.dock.hide();
+
+    commands.shake.shortcut = "cmd+shift+s";
+    commands.reloadJs.shortcut = "cmd+shift+r";
+    commands.debugJs.shortcut = "ctrl+shift+d";
+    commands.liveReload.shortcut = "cmd+ctrl+shift+e";
 }
+
 
 let deviceIds = [];
 let tray;
-
-// hide dock icon since we're just menubar
-app.dock.hide();
-
 app.on('ready', () => {
     // Create a sweet tray icon
     tray = new Tray(iconPath);
